@@ -1,10 +1,10 @@
 KISSY.add('modules/output', function (S) {
-    var css = 'body{cursor: pointer}';
+    var html = 'body{cursor: pointer}';
 
     return function () {
         S.one('#r-output').on('click', function(e) {
-            this.href = img;
-            //this.href = 'data:text/css;charset=utf-8,' + encodeURIComponent(css);
+            this.download = 'a.html';
+            this.href = 'data:text/html;charset=utf-8,' + encodeURIComponent(html);
         });
     };
 });
